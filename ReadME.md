@@ -30,17 +30,17 @@ For extensive document collections, a hierarchical indexing system can significa
 A novel approach involves the generation of hypothetical questions for each text chunk. These questions are then vectorized and stored, replacing the traditional text vectors in the index. This method enhances semantic alignment between user queries and stored data, potentially leading to more accurate retrievals. The HyDE method reverses this process by generating hypothetical responses to queries, using these as additional data points to refine search accuracy.
 
 
-![Sentence Window Retrival](image-1.png)
+![Sentence Window Retrival](assests/image-1.png)
 This technique enhances search precision by embedding individual sentences and extending the search context to include neighboring sentences. This not only improves the relevance of the retrieved data but also provides the LLM with a richer context for generating responses.
 
-![Auto-merging Retriever (Parent Document Retriever)](image-2.png)
+![Auto-merging Retriever (Parent Document Retriever)](assests/image-2.png)
 Similar to the Sentence Window Retrieval, this method focuses on granularity but extends the context more broadly. Documents are segmented into a hierarchy of chunks, and smaller, more relevant pieces are initially retrieved. If multiple small chunks relate to a larger segment, they are merged to form a comprehensive context, which is then presented to the LLM.
 
 # Retrieving 
 Reranking and Filtering: Enhancing Retrieval Precision
 After the initial retrieval of results using any of the aforementioned sophisticated algorithms, the focus shifts to refining these results through various post-processing techniques. In systems like LlamaIndex, a plethora of Postprocessors are available, enabling the fine-tuning of retrieval outcomes based on similarity scores, keywords, metadata, or through re-ranking with additional models . Can you a different LLM
 
-![Enhanced Query](image-3.png)
+![Enhanced Query](assests/image-3.png)
  Sub-query Decomposition : Query transformation techniques utilize LLMs to alter or refine user inputs, thereby improving the quality and relevance of information retrieval. These transformations can take various forms:
 an LLM can break down the query into simpler, more manageable sub-queries. Each sub-query can then be processed independently, with their results synthesized later to form a comprehensive response. Both LangChain and LlamaIndex feature tools like Multi Query Retriever and Sub Question Query Engine to facilitate this process.
 
@@ -56,7 +56,7 @@ The culmination of any RAG pipeline is the synthesis of a response based on the 
 
 # Advanced techniques 
 Chat Engine: Enhancing Dialogue Capabilities in RAG Systems
-![Chat Engine with history ](image-4.png)
+![Chat Engine with history ](assests/image-4.png)
 
 - ContextChatEngine: A straightforward approach where the LLM retrieves context relevant to the user’s query along with any previous chat history. This history is then used to inform the LLM’s response, ensuring continuity and relevance in the dialogue.
 
@@ -75,7 +75,7 @@ Models Available
 ![models](assests/image.png)
 
 Pipeline 
-![pipeline](assests/pipeline.png)
+![pipeline](assests/Pipeline.png)
 Resources 
 [Mistral Embeddings](https://docs.mistral.ai/capabilities/embeddings/)
 
