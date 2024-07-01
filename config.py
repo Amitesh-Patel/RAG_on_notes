@@ -1,0 +1,4 @@
+EMBEDDING_MODEL = "all-mpnet-base-v2"
+API_KEY = "AIzaSyAFMaw7UPMotGv9cCqZrtOhnmjAeOkF7I0"
+MIN_TOKEN_LENGTH = 30
+BATCH_SIZE = 32
