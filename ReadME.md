@@ -23,7 +23,7 @@ store and retrieve vectorized content efficiently.
 The most straightforward approach utilizes a flat index, performing brute-force searches across all vectors. However, for larger scales, more sophisticated indices like FAISS, NMSLIB, or Annoy are employed, using Approximate Nearest Neighbours techniques for faster retrieval. Managed solutions like OpenSearch or ElasticSearch, and vector databases such as Pinecone and Weaviate, also play a role by simplifying data management.
 
 Some techniques 
-![ Hierarchical Indice](assests/image.png)
+<!-- ![ Hierarchical Indice](assests/image.png) -->
 For extensive document collections, a hierarchical indexing system can significantly enhance search efficiency. This method involves creating a two-tiered system: one index for document summaries and another for detailed chunks. By filtering through summaries first, the search process becomes more targeted, focusing only on relevant documents in the subsequent, more detailed search step
 
 2.3 Hypothetical Questions and the HyDE Approach:
