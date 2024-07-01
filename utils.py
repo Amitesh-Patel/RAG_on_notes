@@ -2,6 +2,18 @@ import torch
 import textwrap
 import numpy as np
 
+from huggingface_hub import HfApi, HfFolder
+import os
+
+def login_to_huggingface():
+    hf_token = "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"
+
+    if hf_token is None:
+        raise ValueError("Please set the HF_TOKEN environment variable")
+    
+    HfFolder.save_token(hf_token)
+    print("Logged in successfully")
+
 def prompt_formatter(query, context_items):
     context = "- " + "\n- ".join([str(item.get('sentence_chunk', item)) for item in context_items])
     prompt = f"""Based on the following context items, please answer the query.
