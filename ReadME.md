@@ -1,3 +1,7 @@
+# Video 
+
+([Video](https://drive.google.com/file/d/1KD7NAasHvx6TV3M7kFu4LqZI4Zi4Q-2q/view?usp=sharing))
+
 # Converted HTML Notes to PDF
 
 Downloaded all the notes form the notion
